@@ -1,41 +1,55 @@
 package com.sms.model;
+import java.util.*;
 
-public class student {
-	private int StudentId;
-	private String StudentName;
-	private String Department;
-	private String Email;
-	private long PhoneNumber;
+public class Student {
+	private String Name;
+    private int StudentId;
+    private String Department;
+    private String Email;
+    private long PhoneNumber;
+    public Student(int StudentId,String Name,String Department,String Email,long PhoneNumber){
+    	this.Department=Department;
+    	this.Email=Email;
+    	this.Name=Name;
+    	this.PhoneNumber=PhoneNumber;
+    	this.StudentId=StudentId;
+    }
+    public String getName() {
+    	return Name;
+    }
+    public String getEmail() {
+    	return Email;
+    }
+    public int getId() {
+    	return StudentId;
+    }
+    public String Department() {
+    	return Department;
+    }
+    public long getPhoneNumber() {
+    	return PhoneNumber;
+    }
+    public void setName(String Name) {
+    	this.Name=Name;
+    }
+    public void setStudentId(int StudentId) {
+    	this.StudentId=StudentId;
+    }
+    public void setDepartment(String Department) {
+    	this.Department=Department;
+    }
+    public void setEmail(String Email) {
+    	this.Email=Email;
+    }
+    public void setPhoneNumber(long PhoneNumber) {
+    	this.PhoneNumber=PhoneNumber;
+    }
 	
-	Student(int StudentId ,String StudentName ,String Department ,String Email ,long PhoneNumber){
-		this.StudentId=StudentId;
-		this.StudentName=StudentName;
-		this.Department=Department;
-		this.Email=Email;
-		this.PhoneNumber=PhoneNumber;
-		
-	}
-	public int getId() {
-		return StudentId;
-		
-	}
-	public void setId(int StudentId) {
-		this.StudentId=StudentId;
-	}
-	public String getName() {
-		return StudentName;
-		
-	}
-	public void setName(String StudentName) {
-		this.StudentName=StudentName;
-	}
-	public String getEmail() {
-		return StudentEmail;
-		
-	}
-	public void setEmail(String StudentEmail) {
-		this.StudentEmail=StudentEmail;
-	}
-	
+    public String toString() {
+    	return StudentId+" "+"Name"+" "+"Department"+" "+"Email"+" "+PhoneNumber;
+    }
 
+	
+    
+    
 }
